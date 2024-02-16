@@ -1,0 +1,46 @@
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.6rem 1.4rem 0.6rem 1.6rem;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 2.8rem;
+  border: 0.2rem solid transparent;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn__icon {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+.btn--outline {
+  color: var(--color-space);
+  border-color: currentColor;
+  background-color: transparent;
+
+  &:hover,
+  &:active {
+    color: var(--color-teal);
+  }
+
+  &:disabled {
+    color: var(--color-blush);
+  }
+}
+
+.btn--fill {
+  background-color: var(--color-sapce);
+  color: #ffffff;
+
+  &:hover,
+  &:active {
+    background-color: var(--color-teal);
+  }
+  &:disabled {
+    background-color: var(--color-blush);
+  }
+}
