@@ -25,20 +25,32 @@
   &:hover,
   &:active {
     color: var(--color-teal);
+
+    .btn__icon path {
+      stroke: var(--color-teal);
+    }
   }
 
   &:disabled {
     color: var(--color-blush);
+    .btn__icon path {
+      stroke: var(--color-blush);
+    }
   }
 }
 
 .btn--fill {
-  background-color: var(--color-sapce);
-  color: #ffffff;
+  background-color: var(--color-space);
+  color: #fff;
+
+  .btn__icon path {
+    stroke: #fff;
+  }
 
   &:hover,
   &:active {
     background-color: var(--color-teal);
+    
   }
   &:disabled {
     background-color: var(--color-blush);
