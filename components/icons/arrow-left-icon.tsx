@@ -1,5 +1,4 @@
-
-const ArrowIcon = ({ className }: { className?: string }) => {
+const ArrowLeftIcon = ({ className }: { className?: string }) => {
   return (
     <svg
       width="16"
@@ -10,14 +9,14 @@ const ArrowIcon = ({ className }: { className?: string }) => {
       className={className}
     >
       <path
-        d="M10 15L17 8L10 1"
+        d="M8 1L1 8L8 15"
         stroke="#222222"
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
-        d="M17 8L1 8"
+        d="M1 8H17"
         stroke="#222222"
         strokeWidth="2"
         strokeLinecap="round"
@@ -27,4 +26,4 @@ const ArrowIcon = ({ className }: { className?: string }) => {
   );
 };
 
-export default ArrowIcon;
+export default ArrowLeftIcon;

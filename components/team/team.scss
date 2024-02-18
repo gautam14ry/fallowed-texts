@@ -1,0 +1,24 @@
+.team {
+  background-color: var(--color-blush);
+}
+.team__content {
+  padding: 12rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+
+
+@media screen and (max-width: 1099px) {
+  .team__content {
+    padding: 8rem 4rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .team__content {
+    padding: 2.4rem;
+    gap: 2.4rem;
+  }
+}

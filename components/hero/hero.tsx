@@ -1,18 +1,26 @@
 import Image from "next/image";
-import { Button } from "../ui/button";
-import Container from "../ui/container/container";
+import { Button } from "@/components/ui/button";
+import Container from "@/components/ui/container/container";
+import { getLandingPageData } from "@/data/getLandingPageData";
 
-import "./hero-style.scss";
+import "./hero.scss";
 
-const Hero = ({ data }: any) => {
+const Hero = async () => {
+  const { hero_section } = await getLandingPageData();
+
+  if (hero_section.length === 0) {
+    return;
+  }
+
   const {
+    first_image,
+    second_image,
     title,
     description,
     cta_button_text,
-    first_image,
-    second_image,
     third_image,
-  } = data;
+  } = hero_section[0];
+
   return (
     <section className="hero">
       <Container>
@@ -24,6 +32,7 @@ const Hero = ({ data }: any) => {
               className="hero__image hero__image--first"
               width={486}
               height={397}
+              priority
             />
             <Image
               src={second_image.filename}
@@ -31,6 +40,7 @@ const Hero = ({ data }: any) => {
               className="hero__image hero__image--second"
               width={754}
               height={397}
+              priority
             />
           </div>
           <div className="hero__row hero__row--second">
@@ -47,6 +57,7 @@ const Hero = ({ data }: any) => {
               className="hero__image hero__image--third"
               width={376}
               height={376}
+              priority
             />
           </div>
         </div>

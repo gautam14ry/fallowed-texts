@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 };
 
 storyblokInit({
-  accessToken: "gAA1QgQk0Ogc3ay5sQEclgtt",
+  accessToken: process.env.SB_TOKEN,
   use: [apiPlugin],
 });
 
