@@ -1,6 +1,4 @@
-import { SwiperSlide } from "swiper/react";
 import { Container } from "@/components/ui/container";
-import Image from "next/image";
 import { Slider } from "@/components/ui/slider";
 import { getLandingPageData } from "@/data/getLandingPageData";
 

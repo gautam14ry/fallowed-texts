@@ -3,7 +3,7 @@ import { getStoryblokApi } from "@storyblok/react/rsc";
 type VesionType = "published" | "draft";
 
 export async function getLandingPageData() {
-  let version = process.env.SB_DATA_VERSION as VesionType;
+  let version = (process.env.SB_DATA_VERSION as VesionType) || "draft";
 
   const storyblokApi = getStoryblokApi();
   const { data } = await storyblokApi.get(

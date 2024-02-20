@@ -5,7 +5,7 @@ import { ReactNode } from "react";
 
 /** 2. Initialize it as usual */
 storyblokInit({
-  accessToken: "your_preview_token",
+  accessToken: process.env.SB_TOKEN,
   use: [apiPlugin],
 });
 
